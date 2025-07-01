@@ -53,6 +53,7 @@ const DoctorsList = () => {
   // Fetch doctors on component mount
   useEffect(() => {
     dispatch(fetchDoctors());
+    console.log(doctors);
   }, [dispatch]);
 
   // Update filters
@@ -237,7 +238,7 @@ const DoctorsList = () => {
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src={doctor.image}
+                    src={doctor.profileImage}
                     alt={doctor.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
